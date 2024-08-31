@@ -2,8 +2,8 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 from decimal import Decimal
 
-from .models import Category, MenuItem, Cart, Order, OrderItem, Menu, Booking
-
+from .models import Booking, Category, MenuItem, Cart, Order, OrderItem, Menu, Registering
+from django.contrib.auth.hashers import make_password
 
 class CategorySerializer (serializers.ModelSerializer):
     class Meta:
@@ -72,4 +72,23 @@ class BookingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Booking
         fields = ['id', 'first_name', 'reservation_date', 'reservation_slot']
+
+
+class RegisteringSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Registering
+        fields = ['id', 'username', 'email', 'password', 'first_name', 'last_name', 'date_joined']
+        extra_kwargs = {
+            'password': {'write_only': True},  # Ensure password is not read in responses
+            'date_joined': {'read_only': True},  # Ensure date_joined is read-only
+        }
+
+    def create(self, validated_data):
+        # Create and return a new `Registering` instance, given the validated data
+        # Hash the password before saving
+        password = validated_data.pop('password')
+        user = Registering.objects.create(**validated_data)
+        user.password = make_password(password)  # Hash the password
+        user.save()
+        return user
         
