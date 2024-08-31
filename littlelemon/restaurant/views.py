@@ -19,7 +19,7 @@ from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import render
 from .models import Category, Menu, MenuItem, Cart, Order, OrderItem
 from django.http import JsonResponse
-from .serializers import BookingSerializer, CategorySerializer, MenuItemSerializer, CartSerializer, OrderSerializer, UserSerilializer
+from .serializers import BookingSerializer, CategorySerializer, MenuItemSerializer, CartSerializer, OrderSerializer, RegisteringSerializer, UserSerilializer
 from rest_framework.response import Response
 from rest_framework.permissions import IsAdminUser
 from django.shortcuts import  get_object_or_404
@@ -380,4 +380,14 @@ class BookingListView(generics.ListCreateAPIView):
 class BookingDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
+
+# Registraion list view 
+
+class RegisteringListCreateView(generics.ListCreateAPIView):
+    queryset = Registering.objects.all()
+    serializer_class = RegisteringSerializer
+
+class RegisteringDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Registering.objects.all()
+    serializer_class = RegisteringSerializer
 
