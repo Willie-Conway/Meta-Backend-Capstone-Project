@@ -29,7 +29,11 @@ urlpatterns = [
 
     path('groups/delivery-crew/users/', views.DeliveryCrewViewSet.as_view(
         {'get': 'list', 'post': 'create', 'delete': 'destroy'})),
-    
+
+    # Other URL patterns
+    path('booking/', views.BookingListView.as_view(), name='booking_list'),
+    # Or if you want to add details
+    path('booking/<int:pk>/', views.BookingDetailView.as_view(), name='booking_detail'),
   
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
