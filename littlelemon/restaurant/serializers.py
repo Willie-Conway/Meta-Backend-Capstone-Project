@@ -2,7 +2,7 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 from decimal import Decimal
 
-from .models import Category, MenuItem, Cart, Order, OrderItem, Menu
+from .models import Category, MenuItem, Cart, Order, OrderItem, Menu, Booking
 
 
 class CategorySerializer (serializers.ModelSerializer):
@@ -67,10 +67,6 @@ class MenuSerializer(serializers.ModelSerializer):
         model = Menu
         fields = ['id', 'name', 'price', 'menu_item_description', 'image']
         
-
-
-from rest_framework import serializers
-from .models import Booking
 
 class BookingSerializer(serializers.ModelSerializer):
     class Meta:
