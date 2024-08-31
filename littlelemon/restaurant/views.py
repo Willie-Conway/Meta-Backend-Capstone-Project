@@ -19,7 +19,7 @@ from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import render
 from .models import Category, Menu, MenuItem, Cart, Order, OrderItem
 from django.http import JsonResponse
-from .serializers import CategorySerializer, MenuItemSerializer, CartSerializer, OrderSerializer, UserSerilializer
+from .serializers import BookingSerializer, CategorySerializer, MenuItemSerializer, CartSerializer, OrderSerializer, UserSerilializer
 from rest_framework.response import Response
 from rest_framework.permissions import IsAdminUser
 from django.shortcuts import  get_object_or_404
