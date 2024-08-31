@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+  <article>
+    <h1>Register</h1>
+    <form method="POST" id="register-form" action="{% url 'register' %}">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" class="form-control"  placeholder="Username" required>
+      </div>
+      <div class="form-group"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+      </div>
+      <div class="form-group"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+      </div>
+      <div class="form-group"><br>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name">
+      </div>
+      <div class="form-group"><br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name"> 
+      </div><br>
+      <button type="submit" class="btn btn-primary" id='button'>Register</button>
+    </form><br>
+
+    <!-- Section to display recent registrations -->
+  <div class="column">
+    <h2>Recent Registrations<span id="today"></span></h2>
+    <div id="registrations">
+    </div>
+  </div>
+    <!-- Dynamic content will be loaded here -->
+
+
+
+    <div id="message" style="margin-top: 20px;"></div> 
+    <!--End col-->
+
+
+  </article>
+</section>
+
+<script>
+  document.getElementById('register-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the default form submission
+    
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+    
+    fetch("{% url 'registrations' %}", {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+      }
+    })
+    .then(response => response.json())
+    .then(result => {
+      const messageElement = document.getElementById('message');
+      if (result.error) {
+        messageElement.innerHTML = `<div class="alert alert-danger">${result.error}</div>`;
+      } else {
+        messageElement.innerHTML = `<div class="alert alert-success">${result.success}</div>`;
+        document.getElementById('register-form').reset(); // Reset the form fields
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      document.getElementById('message').innerHTML = `<div class="alert alert-danger">An error occurred. Please try again.</div>`;
+    });
+  });
+</script>
+{% endblock %}
