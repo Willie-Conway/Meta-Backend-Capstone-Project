@@ -34,6 +34,9 @@ urlpatterns = [
     path('booking/', views.BookingListView.as_view(), name='booking_list'),
     # Or if you want to add details
     path('booking/<int:pk>/', views.BookingDetailView.as_view(), name='booking_detail'),
+
+    path('registering/', views.RegisteringListCreateView.as_view(), name='register_list_create'),
+    path('registering/<int:pk>/', RegisteringDetailView.as_view(), name='register_detail'),
   
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
