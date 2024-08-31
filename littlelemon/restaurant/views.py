@@ -371,3 +371,13 @@ class DeliveryCrewViewSet(viewsets.ViewSet):
         return Response({"message": "user removed from the delivery crew group"}, 200)
     
 
+# Booking list views
+
+class BookingListView(generics.ListCreateAPIView):
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializer
+
+class BookingDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializer
+
