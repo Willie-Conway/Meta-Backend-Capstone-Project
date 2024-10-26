@@ -28,6 +28,7 @@ The Little Lemon Web Application is built using `Django` and `Django REST Framew
     <img src="https://github.com/Willie-Conway/Meta-Backend-Capstone-Project/blob/main/Images/Menu/127.0.0.1_9000_api_.png" width="300" />
     <img src="https://github.com/Willie-Conway/Meta-Backend-Capstone-Project/blob/main/Images/Reservations%20and%20Registrations/127.0.0.1_9000_api_book_.png" width="300" />
     <img src="https://github.com/Willie-Conway/Meta-Backend-Capstone-Project/blob/main/Images/Reservations%20and%20Registrations/127.0.0.1_9000_api_reservations_.png" width="300" />
+    <img src="https://github.com/Willie-Conway/Meta-Backend-Capstone-Project/blob/main/Images/Menu/127.0.0.1_9000_api_about_.png" width="300" />
 </p>
 
 <p float="left">
