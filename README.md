@@ -14,9 +14,11 @@
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Unit Testing](#unit-testing)
+- [Exercises](#exercises)
 - [Contributing](#contributing)
 - [License](#license)
 
+  
 ## Introduction
 This README provides an overview of the steps taken to develop the Little Lemon Web Application as part of the **Meta Back-End Developer Capstone** Project. The application serves as a restaurant management system, featuring menu and reservation functionalities.
 
@@ -114,6 +116,16 @@ The Little Lemon Web Application is built using `Django` and `Django REST Framew
   python manage.py test 
   ```
 
+## Exercises🏋🏿‍♂️
+This section provides a series of exercises that guide you through the development process of the Little Lemon Web Application. Each exercise is designed to help you implement key features step-by-step.
+
+
+1. [Setting up the project](#)
+2. [Setting up the MySQL database and users](#)
+3. [Implementing the Django REST Framework](#)
+4. [Installing Djoser and testing with Insomnia](#)
+5. [Creating the unit tests](#)
+
 ## Contributing
 Contributions are welcome! Please follow these steps:
 
@@ -126,3 +138,4 @@ Contributions are welcome! Please follow these steps:
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
