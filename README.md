@@ -1,5 +1,10 @@
 # Little Lemon Web Application
 
+<p float="left">
+    <img src="https://tinypic.host/images/2024/10/26/Meta-Back-End-Developer.png" width="300" />
+    <img src="https://github.com/Willie-Conway/Meta-Database-Capstone-Project/blob/main/Images/Little%20Lemon%20Logo.png" width="300" />
+</p>
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Project Overview](#project-overview)
