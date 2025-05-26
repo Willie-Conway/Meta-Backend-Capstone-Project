@@ -85,16 +85,12 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
 DATABASES = {
-     'default': dj_database_url.config(default='sqlite:///db.sqlite3')
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'reservations',
-    #     'HOST' : '127.0.0.1',
-    #     'PORT' : '3306',
-    #     'USER' : 'root',
-    #     'PASSWORD' : 'Admin@LL123!',
-    # }
+    'default': dj_database_url.config(
+        default='sqlite:///db.sqlite3',
+        conn_max_age=600
+    )
 }
 
 # The settings for media files have been updated for the Graded assessment
