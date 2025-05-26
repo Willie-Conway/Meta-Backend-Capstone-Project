@@ -1,0 +1,184 @@
+hirew@Willie MINGW64 ~/OneDrive/Desktop/C7M5L1 Item 8/littlelemon
+$ mysql -u root -p
+Enter password: ************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 91
+Server version: 8.0.39 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES; 
++--------------------+
+| Database           |
++--------------------+
+| blog_db            |
+| information_schema |
+| littlelemon        |
+| menu_db            |
+| menu_items         |
+| mysql              |
+| performance_schema |
+| reservations       |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+11 rows in set (0.01 sec)
+
+mysql> USE reservations;
+Database changed
+mysql> SHOW tables
+    -> SHOW tables;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHOW tables' at line 2
+mysql> SHOW tables;
++-----------------------------+
+| Tables_in_reservations      |
++-----------------------------+
+| auth_group                  |
+| auth_group_permissions      |
+| auth_permission             |
+| auth_user                   |
+| auth_user_groups            |
+| auth_user_user_permissions  |
+| authtoken_token             |
+| django_admin_log            |
+| django_content_type         |
+| django_migrations           |
+| django_session              |
+| littlelemonapi_booking      |
+| littlelemonapi_cart         |
+| littlelemonapi_category     |
+| littlelemonapi_menu         |
+| littlelemonapi_menuitem     |
+| littlelemonapi_order        |
+| littlelemonapi_orderitem    |
+| littlelemonapi_usercomments |
+| restaurant_booking          |
+| restaurant_menu             |
++-----------------------------+
+21 rows in set (0.00 sec)
+
+mysql> SELECT * FROM restaurant_booking;
++----+------------+------------------+------------------+
+| id | first_name | reservation_date | reservation_slot |
++----+------------+------------------+------------------+
+|  1 | James      | 2024-08-26       |               11 |
+|  2 | Jessica    | 2024-08-26       |                9 |
+|  3 | Carrie     | 2024-08-26       |                7 |
+|  4 | Jessica    | 2024-08-27       |               11 |
+|  5 | Matthew    | 2024-08-27       |               13 |
+|  6 | Carrie     | 2024-08-27       |               15 |
+|  7 | Jimmy Doe  | 2024-08-28       |               17 |
+|  8 | Jane Doe   | 2024-08-28       |               16 |
+|  9 | Sally      | 2024-08-27       |               17 |
++----+------------+------------------+------------------+
+9 rows in set (0.00 sec)
+
+mysql>
+
+
+# I know that I have a lot of tables in 
+  the restaurnat database. I'll correct 
+  this later.
+
+
+hirew@Willie MINGW64 ~/OneDrive/Desktop/C7M5L1 Item 8/littlelemon
+$ mysql -u root -p
+Enter password: ************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 858
+Server version: 8.0.39 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.        
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| blog_db            |
+| information_schema |
+| littlelemon        |
+| menu_db            |
+| menu_items         |
+| mysql              |
+| performance_schema |
+| reservations       |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+11 rows in set (0.01 sec)
+
+mysql> USE reservations;
+Database changed
+mysql> SHOW tables
+    -> SHOW tables;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHOW tables' at line 2
+mysql> SHOW tables;
++-----------------------------+
+| Tables_in_reservations      |
++-----------------------------+
+| auth_group                  |
+| auth_group_permissions      |
+| auth_permission             |
+| auth_user                   |
+| auth_user_groups            |
+| auth_user_user_permissions  |
+| authtoken_token             |
+| django_admin_log            |
+| django_content_type         |
+| django_migrations           |
+| django_session              |
+| littlelemonapi_booking      |
+| littlelemonapi_cart         |
+| littlelemonapi_category     |
+| littlelemonapi_menu         |
+| littlelemonapi_menuitem     |
+| littlelemonapi_order        |
+| littlelemonapi_orderitem    |
+| littlelemonapi_usercomments |
+| restaurant_booking          |
+| restaurant_cart             |
+
+mysql> SELECT * FROM restaurant_registering;
++----+----------+--------------------------+----------+------------+-----------+----------------------------+
+| id | username | email                    | password | first_name | last_name | date_joined                |
++----+----------+--------------------------+----------+------------+-----------+----------------------------+        1 | Jacob    | jacob.hash@gmail.com     | jac@123! | Jacob      | Hash      | 2024-08-31 03:02:42.761794 |
+|  1 | Jacob    | jacob.hash@gmail.com     | jac@123! | Jacob      | Hash      | 2024-08-31 03:02:42.761794 |        3 | Frank    | frank.williams@gmail.com | fra@123! | Frank      | Williams  | 2024-08-31 05:48:27.729846 |
+|  2 | John     | john.piaz@gmail.com      | joh@123! | John       | Piaz      | 2024-08-31 03:46:18.249574 |        5 | Jason    | jason.rice@gmail.com     | jas@123! | Jason      | Rice      | 2024-08-31 05:50:10.930548 |
+|  3 | Frank    | frank.williams@gmail.com | fra@123! | Frank      | Williams  | 2024-08-31 05:48:27.729846 |     +----+----------+--------------------------+----------+------------+-----------+----------------------------+        4 | Tina     | tina.williams@gmail.com  | tin@123! | Tina       | Williams  | 2024-08-31 05:49:04.365602 |     
+|  1 | Jacob    | jacob.hash@gmail.com     | jac@123! | Jacob      | Hash      | 2024-08-31 03:02:42.761794 |        5 | Jason    | jason.rice@gmail.com     | jas@123! | Jason      | Rice      | 2024-08-31 05:50:10.930548 |     
+|  2 | John     | john.piaz@gmail.com      | joh@123! | John       | Piaz      | 2024-08-31 03:46:18.249574 |      ----+----------+--------------------------+----------+------------+-----------+----------------------------+     
+|  3 | Frank    | frank.williams@gmail.com | fra@123! | Frank      | Williams  | 2024-08-31 05:48:27.729846 |     +----+-----+++----+----------+--------------------------+----------+------------+-----------+----------------------------+
+|  1 | Jacob    | jacob.hash@gmail.com     | jac@123! | Jacob      | Hash      | 2024-08-31 03:02:42.761794 |
+|  2 | John     | john.piaz@gmail.com      | joh@123! | John       | Piaz      | 2024-08-31 03:46:18.249574 |
+|  3 | Frank    | frank.williams@gmail.com | fra@123! | Frank      | Williams  | 2024-08-31 05:48:27.729846 |
+|  4 | Tina     | tina.williams@gmail.com  | tin@123! | Tina       | Williams  | 2024-08-31 05:49:04.365602 |
+|  5 | Jason    | jason.rice@gmail.com     | jas@123! | Jason      | Rice      | 2024-08-31 05:50:10.930548 |
++----+----------+--------------------------+----------+------------+-----------+----------------------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM restaurant_cart;
+Empty set (0.00 sec)
+
+mysql> SELECT * FROM restaurant_booking;
++----+---------------+------------------+------------------+
+| id | first_name    | reservation_date | reservation_slot |
++----+---------------+------------------+------------------+
+|  7 | Jimmy Doe     | 2024-08-28       |               17 |
+|  8 | Jane Doe      | 2024-08-28       |               16 |
+| 10 | Jacob Stanely | 2024-08-30       |               13 |
++----+---------------+------------------+------------------+
+3 rows in set (0.00 sec)
