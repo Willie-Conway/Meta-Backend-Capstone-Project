@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'fallback-secret-key-for-dev')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False  # Turn off debug in production
 
-ALLOWED_HOSTS = ['www.littlelemon.com','localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.railway.app','localhost', '127.0.0.1']
 
 
 # Application definition
