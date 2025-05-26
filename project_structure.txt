@@ -1,0 +1,238 @@
+.:
+Images/
+LICENSE
+littlelemon/
+project_structure.txt
+README.md
+
+./Images:
+API/
+Menu/
+Reservations and Registrations/
+
+./Images/API:
+127.0.0.1_9000_admin_.png
+127.0.0.1_9000_admin_auth_group_.png
+127.0.0.1_9000_admin_auth_user_.png
+127.0.0.1_9000_admin_authtoken_tokenproxy_.png
+127.0.0.1_9000_admin_login__next=_admin_.png
+127.0.0.1_9000_admin_restaurant_booking_.png
+127.0.0.1_9000_admin_restaurant_category_.png
+127.0.0.1_9000_admin_restaurant_menu_.png
+127.0.0.1_9000_admin_restaurant_menuitem_.png
+127.0.0.1_9000_admin_restaurant_order_.png
+127.0.0.1_9000_admin_restaurant_orderitem_.png
+127.0.0.1_9000_admin_restaurant_registering_.png
+127.0.0.1_9000_api_menu-items_.png
+127.0.0.1_9000_api_menu-items__page=8 (1).png
+127.0.0.1_9000_api_menu-items__page=8.png
+127.0.0.1_9000_api_menu-items__search=Burgers.png
+127.0.0.1_9000_api_menu-items__search=Pizzas.png
+127.0.0.1_9000_api_menu-items__search=Salads.png
+127.0.0.1_9000_api_menu-items_1_.png
+
+./Images/Menu:
+127.0.0.1_9000_api_.png
+127.0.0.1_9000_api_about_.png
+127.0.0.1_9000_api_menu_.png
+127.0.0.1_9000_api_menu_item_10_.png
+127.0.0.1_9000_api_menu_item_11_.png
+127.0.0.1_9000_api_menu_item_12_.png
+127.0.0.1_9000_api_menu_item_13_.png
+127.0.0.1_9000_api_menu_item_14_.png
+127.0.0.1_9000_api_menu_item_15_.png
+127.0.0.1_9000_api_menu_item_16_.png
+127.0.0.1_9000_api_menu_item_2_.png
+127.0.0.1_9000_api_menu_item_3_.png
+127.0.0.1_9000_api_menu_item_4_.png
+127.0.0.1_9000_api_menu_item_5_.png
+127.0.0.1_9000_api_menu_item_6_.png
+127.0.0.1_9000_api_menu_item_7_.png
+127.0.0.1_9000_api_menu_item_8_.png
+127.0.0.1_9000_api_menu_item_9_.png
+
+./Images/Reservations and Registrations:
+127.0.0.1_9000_api_all_registrations_.png
+127.0.0.1_9000_api_book_.png
+127.0.0.1_9000_api_register_.png
+127.0.0.1_9000_api_reservations_.png
+
+./littlelemon:
+Database_INFO.txt
+db.sqlite3
+littlelemon/
+manage.py*
+media/
+menu_images/
+Pipfile
+Pipfile.lock
+restaurant/
+
+./littlelemon/littlelemon:
+__init__.py
+__pycache__/
+asgi.py
+settings.py
+urls.py
+wsgi.py
+
+./littlelemon/littlelemon/__pycache__:
+__init__.cpython-310.pyc
+__init__.cpython-312.pyc
+settings.cpython-310.pyc
+settings.cpython-312.pyc
+urls.cpython-310.pyc
+urls.cpython-312.pyc
+wsgi.cpython-310.pyc
+wsgi.cpython-312.pyc
+
+./littlelemon/media:
+menu_items/
+
+./littlelemon/media/menu_items:
+Bruschetta_Ekjj9tH.jpg
+Bruschetta_IX3wJIA.jpg
+Ceaser_salad.jpg
+Cheese_pizza.jpg
+Chicken_wings.jpg
+Fettuccine_alfredo.jpg
+Fish_tacos.jpg
+grilled_fish.jpg
+lemon_dessert.jpg
+Marinara_pasta.jpg
+Mozzarella_sticks.jpg
+Mushroom_Swiss_burger.jpg
+Pepperoni_pizza.jpg
+Veggie_burger.jpg
+
+./littlelemon/menu_images:
+Bruschetta.jpg
+Greek_salad.jpg
+Grilled_fish.jpg
+Lemon_dessert.jpg
+
+./littlelemon/restaurant:
+__init__.py
+__pycache__/
+admin.py
+apps.py
+forms.py
+migrations/
+models.py
+serializers.py
+static/
+templates/
+test_models.py
+test_serializers.py
+test_views.py
+tests.py
+urls.py
+views.py
+
+./littlelemon/restaurant/__pycache__:
+__init__.cpython-310.pyc
+__init__.cpython-312.pyc
+admin.cpython-310.pyc
+admin.cpython-312.pyc
+apps.cpython-310.pyc
+apps.cpython-312.pyc
+forms.cpython-310.pyc
+forms.cpython-312.pyc
+models.cpython-310.pyc
+models.cpython-312.pyc
+serializers.cpython-312.pyc
+signals.cpython-312.pyc
+tests.cpython-312.pyc
+urls.cpython-310.pyc
+urls.cpython-312.pyc
+views.cpython-310.pyc
+views.cpython-312.pyc
+
+./littlelemon/restaurant/migrations:
+__init__.py
+__pycache__/
+0001_initial.py
+0002_menu_menu_item_description.py
+0003_remove_booking_comment_remove_booking_guest_number_and_more.py
+0004_registering_menu_image.py
+0005_category_menuitem_order_cart_orderitem.py
+
+./littlelemon/restaurant/migrations/__pycache__:
+__init__.cpython-310.pyc
+__init__.cpython-312.pyc
+0001_initial.cpython-310.pyc
+0001_initial.cpython-312.pyc
+0002_menu_menu_item_description.cpython-310.pyc
+0002_menu_menu_item_description.cpython-312.pyc
+0003_remove_booking_comment_remove_booking_guest_number_and_more.cpython-310.pyc
+0003_remove_booking_comment_remove_booking_guest_number_and_more.cpython-312.pyc
+0004_customer.cpython-312.pyc
+0004_registering_menu_image.cpython-312.pyc
+0005_category_menuitem_order_cart_orderitem.cpython-312.pyc
+0005_menu_image.cpython-312.pyc
+0006_customer_password_customer_username_and_more.cpython-312.pyc
+0006_remove_customer_email_remove_customer_first_name_and_more.cpython-312.pyc
+0007_remove_customer_email_remove_customer_first_name_and_more.cpython-312.pyc
+0007_remove_customer_user_customer_email_and_more.cpython-312.pyc
+0008_alter_customer_email_alter_customer_first_name.cpython-312.pyc
+0009_remove_customer_user.cpython-312.pyc
+
+./littlelemon/restaurant/static:
+css/
+img/
+
+./littlelemon/restaurant/static/css:
+style.css
+
+./littlelemon/restaurant/static/img:
+favicon.ico
+Grill B.jpg
+Grill.jpg
+Grilled fish B.jpg
+Grilled fish C.jpg
+head_chef.jpg
+lemon dessert B.jpg
+logo.png
+logo_footer.png
+Mario and Adrian b.jpg
+mario-and-adrian.jpg
+menu_items/
+pasta.jpg
+restaurant chef C.jpg
+restaurant food B.jpg
+restaurant food.jpg
+restaurant inside alternative.jpg
+restaurant_inside.jpg
+salad.jpg
+
+./littlelemon/restaurant/static/img/menu_items:
+Bruschetta.jpg
+Ceaser salad.jpg
+Cheese pizza.jpg
+Chicken wings.jpg
+Fettuccine alfredo.jpg
+Fish tacos.jpg
+Greek salad.jpg
+Grilled fish.jpg
+Lemon dessert.jpg
+Marinara pasta.jpg
+Mozzarella sticks.jpg
+Mushroom Swiss burger.jpg
+Pepperoni pizza.jpg
+Veggie burger.jpg
+
+./littlelemon/restaurant/templates:
+about.html
+base.html
+book.html
+bookings.html
+index.html
+menu.html
+menu_item.html
+partials/
+register.html
+registrations.html
+
+./littlelemon/restaurant/templates/partials:
+_footer.html
+_header.html

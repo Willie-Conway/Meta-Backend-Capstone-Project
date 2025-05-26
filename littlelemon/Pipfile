@@ -10,6 +10,9 @@ djangorestframework = "*"
 djoser = "*"
 pillow = "*"
 djangorestframework-xml = "*"
+gunicorn = "*"
+dj-database-url = "*"
+whitenoise = "*"
 
 [dev-packages]
 

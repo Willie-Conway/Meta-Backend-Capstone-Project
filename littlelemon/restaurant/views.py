@@ -127,13 +127,23 @@ def bookings(request):
             booking.save()
         else:
             return HttpResponse("{'error':1}", content_type='application/json')
-    
-    date = request.GET.get('date',datetime.today().date())
 
-    bookings = Booking.objects.all().filter(reservation_date=date)
+    # Validate 'date' query param before using it
+    date = request.GET.get('date')
+    if not date:
+        return JsonResponse({"error": "Missing date parameter"}, status=400)
+
+    # Optionally, validate the date format here, e.g., YYYY-MM-DD
+    try:
+        datetime.strptime(date, '%Y-%m-%d')
+    except ValueError:
+        return JsonResponse({"error": "Invalid date format, expected YYYY-MM-DD"}, status=400)
+
+    bookings = Booking.objects.filter(reservation_date=date)
     booking_json = serializers.serialize('json', bookings)
 
     return HttpResponse(booking_json, content_type='application/json')
+
 
 
 # Registrations

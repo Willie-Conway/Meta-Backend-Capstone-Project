@@ -1,3 +1,7 @@
+import os
+import dj_database_url
+
+
 """
 Django settings for littlelemon project.
 
@@ -20,12 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-r-%0eqcja86asp_+*1@3d6t9wm65$7^p*v^m961p@)w7*3ob0n'
+# SECRET_KEY = 'django-insecure-r-%0eqcja86asp_+*1@3d6t9wm65$7^p*v^m961p@)w7*3ob0n'
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'fallback-secret-key-for-dev')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False  # Turn off debug in production
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.littlelemon.com','localhost', '127.0.0.1']
 
 
 # Application definition
@@ -47,6 +52,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Add this line
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -80,14 +86,15 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'reservations',
-        'HOST' : '127.0.0.1',
-        'PORT' : '3306',
-        'USER' : 'root',
-        'PASSWORD' : 'Admin@LL123!',
-    }
+     'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'reservations',
+    #     'HOST' : '127.0.0.1',
+    #     'PORT' : '3306',
+    #     'USER' : 'root',
+    #     'PASSWORD' : 'Admin@LL123!',
+    # }
 }
 
 # The settings for media files have been updated for the Graded assessment
@@ -135,6 +142,8 @@ STATICFILES_DIRS = [
       BASE_DIR / 'restaurant' / 'static',
 ]
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # MEDIA_URL and MEDIA_ROOT should also be configured correctly if you're serving user-uploaded files
 MEDIA_URL = '/media/'
