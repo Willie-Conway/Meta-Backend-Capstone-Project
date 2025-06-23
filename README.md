@@ -1,7 +1,7 @@
 # Little Lemon Web Application
 
 <p float="left">
-    <img src="https://tinypic.host/images/2024/10/26/Meta-Back-End-Developer.png" width="300" />
+    <img src="https://images.credly.com/size/340x340/images/4d81763c-b917-4ab9-92be-103af95c0a21/image.png" width="300" />
     <img src="https://github.com/Willie-Conway/Meta-Database-Capstone-Project/blob/main/Images/Little%20Lemon%20Logo.png" width="300" />
 </p>
 
