@@ -20,7 +20,7 @@
 
   
 ## Introduction
-This README provides an overview of the steps taken to develop the Little Lemon Web Application as part of the **Meta Back-End Developer Capstone** Project. The application serves as a restaurant management system, featuring menu and reservation functionalities.
+This README provides an overview of the steps taken to develop the 🍋Little Lemon Web Application as part of the **Meta Back-End Developer Capstone** Project. The application serves as a restaurant management system, featuring menu and reservation functionalities.
 
 ## Project Overview📁
 The Little Lemon Web Application is built using `Django` and `Django REST Framework`. It allows users to interact with the restaurant's menu and make reservations through a simple web interface and `RESTful API`.
