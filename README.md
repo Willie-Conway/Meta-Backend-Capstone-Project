@@ -1,3 +1,5 @@
+![CI](https://github.com/Willie-Conway/Meta-Backend-Capstone-Project/actions/workflows/django-ci.yml/badge.svg)
+
 # 🍋 Little Lemon Web Application: Backend Capstone Project
 
 <p float="left">
