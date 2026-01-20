@@ -26,3 +26,12 @@ RUN python manage.py collectstatic --noinput
 
 # Start server
 CMD ["gunicorn", "littlelemon.wsgi:application", "--bind", "0.0.0.0:8000"]
+
+
+
+# Test Locally
+
+# docker compose up --build
+# docker compose exec web python manage.py migrate
+# docker compose exec web python manage.py createsuperuser
+
