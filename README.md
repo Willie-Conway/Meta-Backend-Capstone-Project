@@ -2,7 +2,7 @@
 
 <p float="left">
     <img src="https://images.credly.com/size/340x340/images/4d81763c-b917-4ab9-92be-103af95c0a21/image.png" width="300" />
-    <img src="https://github.com/Willie-Conway/Meta-Database-Capstone-Project/blob/main/Images/Little%20Lemon%20Logo.png" width="300" />
+    <img src="https://github.com/Willie-Conway/Meta-Backend-Capstone-Project/blob/e98be3cedc71306d45526dda26a35558ec7fcc0d/Images/Menu/Little%20Lemon.jpg" width="300" />
 </p>
 
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
